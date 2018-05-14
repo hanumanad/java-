@@ -1,4 +1,4 @@
-# this is new
+# this is new file
 # changing directory
 #! /bin/bash
 cd /opt/chintu
