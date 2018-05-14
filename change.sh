@@ -1,3 +1,4 @@
+# changing directory
 #! /bin/bash
 cd /opt/chintu
 touch chintu.txt chiru.txt
