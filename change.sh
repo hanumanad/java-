@@ -1,4 +1,4 @@
-#
+#hj
 # changing directory
 #! /bin/bash
 cd /opt/chintu
