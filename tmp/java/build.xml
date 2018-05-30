@@ -3,7 +3,7 @@
 <target name="clean">
      <delete dir="build/classes"/>
      <delete dir="build/jar"/>
-     <delete dir="build/dist"/>
+     <delete dir="dist"/>
 </target>
 <target name="init" depends="clean">
 <mkdir dir="build/classes"/>
