@@ -1,0 +1,26 @@
+<project name = "hello world" default ="copy">
+<property file ="/opt/ant/file.properties"/>
+<target name="clean">
+     <delete dir="build/classes"/>
+     <delete dir="build/jar"/>
+     <delete dir="build/dist"/>
+</target>
+<target name="init" depends="clean">
+<mkdir dir="build/classes"/>
+<mkdir dir="build/jar"/>
+<mkdir dir="dist"/>
+</target>
+<target name="compile" depends="init">
+<javac srcdir="src" destdir="build/classes"/>
+</target>
+<target name="jar" depends="compile">
+<jar destfile="build/jar/app-${apps}.jar" basedir="build/classes"/>
+</target>
+<target name="dist" depends="jar">
+<zip destfile="dist/app-${apps}.zip" basedir="build/jar"/>
+</target>
+<target name="copy" depends="dist">
+<copy file="build/jar/app-${apps}.jar" todir="/opt/masterpack/builds/${buildnumber}"/>
+<copy file="dist/app-${apps}.zip"  todir="/opt/masterpack/builds/${buildnumber}"/>
+</target>
+</project>
